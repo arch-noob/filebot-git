@@ -21,7 +21,7 @@ url="https://github.com/filebot/filebot"
 license=('GPL')
 install=$_pkgname.install
 depends=('java-openjfx' 'jre8-openjdk' 'fontconfig' 'chromaprint')
-makedepends=('ant' 'ivy')
+makedepends=('ant' 'ivy' 'jdk8-openjdk')
 provides=('filebot')
 conflicts=('filebot47' 'filebot')
 
