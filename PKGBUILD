@@ -83,12 +83,12 @@ pkgver(){
 
 build() {
   cd "$srcdir/$_pkgname/"
-#  print('Set system '+$_jre+' to java-9-openjdk. Should be reverted after build')
+  echo "Set system jdk from $_jre to java-8-openjdk. This will be reverted after build"
   sudo archlinux-java set java-8-openjdk
   ant resolve
   ant jar
-#  print('Reverting system Java to '+$_jre)
-#  sudo archlinux-java set $_jre
+  echo "Reverting system jdk back to "$_jre"
+  sudo archlinux-java set $_jre
 }
 
 package() {
