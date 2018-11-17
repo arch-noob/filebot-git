@@ -87,7 +87,7 @@ build() {
   sudo archlinux-java set java-8-openjdk
   ant resolve
   ant jar
-  echo "Reverting system jdk back to "$_jre"
+  echo "Reverting system jdk back to $_jre"
   sudo archlinux-java set $_jre
 }
 
